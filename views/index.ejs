@@ -1,0 +1,58 @@
+<!-- include header -->
+    <%-include('include/_header') %>
+<!-- /include header -->
+
+<!-- Main Site -->
+<main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex">
+            <a href="/add-user" class="border-shadow">
+                <span class="text-gradient">New User <i class="fas fa-user"></i></span>
+            </a>
+            <a href="/" class="border-shadow sort" >
+                <span class="text-gradient">Sort by Distance <i class="fas fa-tachometer-alt"></i></span>
+            </a>
+            
+            <a href="/sort-turns" class="border-shadow sort" >
+                <span class="text-gradient" id="turns_sort">Sort by Turns <i class="fas fa-truck-moving"></i></span>
+            </a>
+            <a href="/sort-accidents" class="border-shadow sort">
+                <span class="text-gradient">Sort by Accidents <i class="fas fa-car-crash"></i></span>
+            </a>
+
+            <a class="border-shadow-reset">
+                <span class="text-gradient" id="resetbtn">Reset<i class="fas fa-reply"></i></span>
+            </a>
+        </div>
+        <!-- form handeling -->
+            <form action="/" method="POST">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Place</th>
+                            <th>Name</th>
+                            <th>Emp Number</th>
+                            <th>Mobile</th>
+                            <th>Address</th>
+                            <th>Distance</th>
+                            <th>Turns</th>
+                            <th>Accidents</th>
+                            <th>Action</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- include table -->
+                            <%-include('include/_show') %>
+                        <!-- /include table -->
+                    </tbody>
+                </table>
+            </form>
+        <!-- /form handeling -->
+    </div>
+</main>
+<!-- /Main Site -->
+
+<!-- include footer -->
+<%-include('include/_footer') %>
+<!-- /include footer -->
